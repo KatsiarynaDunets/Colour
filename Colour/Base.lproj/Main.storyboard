@@ -13,17 +13,16 @@
             <objects>
                 <viewController id="QNY-ZO-cRU" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="psH-YX-XD1">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAv-Yq-wMI">
-                                <rect key="frame" x="107" y="404" width="179" height="35"/>
+                                <rect key="frame" x="107" y="345" width="179" height="35"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Change background"/>
                                 <connections>
-                                    <action selector="changeBGButtonPressed:" destination="3An-pj-wl1" eventType="touchUpInside" id="rcC-yi-zY6"/>
-                                    <segue destination="Nks-UZ-ft9" kind="show" identifier="goToSettings" id="XgJ-aR-cPM"/>
+                                    <action selector="changeBGButtonPressed:" destination="3An-pj-wl1" eventType="touchUpInside" id="oTi-vO-PX5"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -34,6 +33,7 @@
                             <constraint firstItem="oAv-Yq-wMI" firstAttribute="centerX" secondItem="psH-YX-XD1" secondAttribute="centerX" id="gbD-TX-JPU"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="3b6-Hr-bDy"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uhv-5j-9PE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="3An-pj-wl1" userLabel="Exit" sceneMemberID="exit"/>
@@ -45,11 +45,11 @@
             <objects>
                 <viewController id="Nks-UZ-ft9" customClass="SettingsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WtT-f6-3nE">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="chy-XH-fdG">
-                                <rect key="frame" x="0.0" y="70" width="393" height="842"/>
+                                <rect key="frame" x="0.0" y="129" width="393" height="842"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NAt-jx-hfy">
                                         <rect key="frame" x="-1" y="0.0" width="395" height="706.66666666666663"/>
@@ -135,7 +135,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="IV7-yL-FRm">
-                                                                <rect key="frame" x="0.0" y="29.333333333333336" width="355.66666666666669" height="45.000000000000007"/>
+                                                                <rect key="frame" x="0.0" y="29.333333333333329" width="355.66666666666669" height="45"/>
                                                                 <subviews>
                                                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="uX2-cM-rT1">
                                                                         <rect key="frame" x="-2" y="0.0" width="272.66666666666669" height="46"/>
@@ -162,16 +162,13 @@
                                                         <rect key="frame" x="0.0" y="283" width="355.66666666666669" height="45"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hex color #" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1F-He-cF7">
-                                                                <rect key="frame" x="0.0" y="0.0" width="198.66666666666666" height="45"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="87" height="45"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="FF0000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OOC-qi-SS1">
-                                                                <rect key="frame" x="215.66666666666669" y="0.0" width="140" height="45"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="140" id="xoy-pu-lEO"/>
-                                                                </constraints>
+                                                                <rect key="frame" x="103.99999999999999" y="0.0" width="251.66666666666663" height="45"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
@@ -299,10 +296,13 @@
                             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </navigationBarAppearance>
                     </navigationBar>
+                    <connections>
+                        <segue destination="QNY-ZO-cRU" kind="push" identifier="goToSettings" destinationCreationSelector="changeSmth:sender:" id="nyT-NK-VMZ"/>
+                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z0E-FR-G3c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-813" y="-15"/>
+            <point key="canvasLocation" x="-830" y="-25"/>
         </scene>
     </scenes>
     <resources>
