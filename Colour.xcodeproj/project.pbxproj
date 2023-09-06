@@ -17,6 +17,8 @@
 		5224169B2AA9078400AC065D /* ColourTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5224169A2AA9078400AC065D /* ColourTests.swift */; };
 		522416A52AA9078400AC065D /* ColourUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522416A42AA9078400AC065D /* ColourUITests.swift */; };
 		522416A72AA9078400AC065D /* ColourUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522416A62AA9078400AC065D /* ColourUITestsLaunchTests.swift */; };
+		522416B42AA90F4600AC065D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522416B32AA90F4600AC065D /* SettingsViewController.swift */; };
+		522416B62AA91E9E00AC065D /* Extension Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522416B52AA91E9E00AC065D /* Extension Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		522416A02AA9078400AC065D /* ColourUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColourUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		522416A42AA9078400AC065D /* ColourUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourUITests.swift; sourceTree = "<group>"; };
 		522416A62AA9078400AC065D /* ColourUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		522416B32AA90F4600AC065D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		522416B52AA91E9E00AC065D /* Extension Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension Color.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,11 +108,13 @@
 				522416802AA9078200AC065D /* AppDelegate.swift */,
 				522416822AA9078200AC065D /* SceneDelegate.swift */,
 				522416842AA9078200AC065D /* ViewController.swift */,
+				522416B32AA90F4600AC065D /* SettingsViewController.swift */,
 				522416862AA9078200AC065D /* Main.storyboard */,
 				5224168C2AA9078400AC065D /* Assets.xcassets */,
 				5224168E2AA9078400AC065D /* LaunchScreen.storyboard */,
 				522416912AA9078400AC065D /* Info.plist */,
 				522416892AA9078200AC065D /* Colour.xcdatamodeld */,
+				522416B52AA91E9E00AC065D /* Extension Color.swift */,
 			);
 			path = Colour;
 			sourceTree = "<group>";
@@ -264,6 +270,8 @@
 				522416852AA9078200AC065D /* ViewController.swift in Sources */,
 				522416812AA9078200AC065D /* AppDelegate.swift in Sources */,
 				522416832AA9078200AC065D /* SceneDelegate.swift in Sources */,
+				522416B62AA91E9E00AC065D /* Extension Color.swift in Sources */,
+				522416B42AA90F4600AC065D /* SettingsViewController.swift in Sources */,
 				5224168B2AA9078200AC065D /* Colour.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
