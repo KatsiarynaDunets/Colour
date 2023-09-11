@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Colour Switcher App" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="txu-dd-uPN">
-                                <rect key="frame" x="17.666666666666657" y="417.33333333333331" width="358" height="42.666666666666686"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color Switcher App" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="txu-dd-uPN">
+                                <rect key="frame" x="28.666666666666657" y="417.33333333333331" width="336" height="42.666666666666686"/>
                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="35"/>
                                 <color key="textColor" systemColor="systemGroupedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
