@@ -40,6 +40,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uhv-5j-9PE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="aWN-jT-fFs" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="18" y="-15"/>
         </scene>
@@ -72,7 +73,7 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="X8o-9M-Psx">
                                                                 <rect key="frame" x="0.0" y="19.333333333333314" width="355.66666666666669" height="45"/>
                                                                 <subviews>
-                                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="bqW-ma-uvH">
+                                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="bqW-ma-uvH">
                                                                         <rect key="frame" x="-2" y="0.0" width="284.66666666666669" height="46"/>
                                                                         <color key="tintColor" systemColor="systemRedColor"/>
                                                                         <connections>
@@ -107,7 +108,7 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="HOm-BA-k5H">
                                                                 <rect key="frame" x="0.0" y="19.333333333333329" width="355.66666666666669" height="45"/>
                                                                 <subviews>
-                                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="mRu-Tz-v0r">
+                                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="mRu-Tz-v0r">
                                                                         <rect key="frame" x="-2" y="0.0" width="272.66666666666669" height="46"/>
                                                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                                                         <connections>
@@ -141,7 +142,7 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="IV7-yL-FRm">
                                                                 <rect key="frame" x="0.0" y="19.333333333333314" width="355.66666666666669" height="45"/>
                                                                 <subviews>
-                                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="uX2-cM-rT1">
+                                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="uX2-cM-rT1">
                                                                         <rect key="frame" x="-2" y="0.0" width="272.66666666666669" height="46"/>
                                                                         <connections>
                                                                             <action selector="sliderValueChanged:" destination="Nks-UZ-ft9" eventType="valueChanged" id="9kT-Oq-cMZ"/>
@@ -225,8 +226,9 @@
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="Done with delegates"/>
                                                         <connections>
+                                                            <action selector="UnwindAction:" destination="XSn-V0-lUI" eventType="touchUpInside" id="8CR-8B-8e7"/>
                                                             <action selector="doneWithDelegatesButtonPressed:" destination="Nks-UZ-ft9" eventType="touchUpInside" id="IDr-uI-rIv"/>
-                                                            <segue destination="QNY-ZO-cRU" kind="presentation" id="ZtQ-fV-Ald"/>
+                                                            <segue destination="aWN-jT-fFs" kind="unwind" unwindAction="UnwindActionWithUnwindSegue:" id="V1X-j2-kbb"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fl2-TW-LjJ">
@@ -236,7 +238,7 @@
                                                         <buttonConfiguration key="configuration" style="filled" title="Done with closure"/>
                                                         <connections>
                                                             <action selector="doneWithClosureButtonPressed:" destination="Nks-UZ-ft9" eventType="touchUpInside" id="ypT-6s-kSo"/>
-                                                            <segue destination="QNY-ZO-cRU" kind="presentation" id="PCO-IQ-fSn"/>
+                                                            <segue destination="aWN-jT-fFs" kind="unwind" unwindAction="UnwindActionWithClosureWithUnwindSegue:" id="dS3-cR-Bt7"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -301,6 +303,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wjc-Es-mfd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="XSn-V0-lUI" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="820.61068702290072" y="-15.492957746478874"/>
         </scene>
@@ -325,9 +328,6 @@
             <point key="canvasLocation" x="-830" y="-25"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="ZtQ-fV-Ald"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

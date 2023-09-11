@@ -28,4 +28,16 @@ class ViewController: UIViewController, ColorPickerDelegate {
     func didSelectColor(_ color: UIColor) {
         view.backgroundColor = color
     }
+    
+    @IBAction func UnwindAction(unwindSegue: UIStoryboardSegue) {
+        if let sourceViewController = unwindSegue.source as? SettingsViewController {
+                view.backgroundColor = sourceViewController.colorView.backgroundColor
+            }
+    }
+
+    @IBAction func UnwindActionWithClosure(unwindSegue: UIStoryboardSegue) {
+        if let sourceViewController = unwindSegue.source as? SettingsViewController {
+                view.backgroundColor = sourceViewController.colorView.backgroundColor
+            }
+    }
 }
