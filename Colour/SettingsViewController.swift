@@ -7,7 +7,14 @@
 
 import SwiftUI
 
+protocol ColorPickerDelegate {
+    func didSelectColor(_ color: UIColor)
+}
+
 class SettingsViewController: UIViewController {
+    var delegate: ColorPickerDelegate?
+    var colorClosure: ((UIColor) -> Void)?
+    
     // Sliders
     @IBOutlet var redSlider: UISlider!
     @IBOutlet var greenSlider: UISlider!
@@ -21,35 +28,33 @@ class SettingsViewController: UIViewController {
     @IBOutlet var opacityTF: UITextField!
     // Wiew
     @IBOutlet var colorView: UIView!
+    // Buttons
+    @IBOutlet weak var doneWithDelegate: UIButton!
+    @IBOutlet var doneWithClosure: UIButton!
     
-    var selectedColor: UIColor = .white
+    @IBAction func sliderValueChanged(_ sender: UISlider) { updateColor()
+    }
         
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBAction func doneWithDelegatesButtonPressed(_ sender: UIButton) {
+        delegate?.didSelectColor(view.backgroundColor ?? UIColor.white)
+        navigationController?.popViewController(animated: true)
     }
         
-    @IBAction func redSliderChanged(_ sender: UISlider) { updateColor()
+    @IBAction func doneWithClosureButtonPressed(_ sender: UIButton) {
+        if let colorClosure = colorClosure {
+            colorClosure(view.backgroundColor ?? UIColor.white)
+        }
+        navigationController?.popViewController(animated: true)
     }
-
-    @IBAction func greenSliderChanged(_ sender: UISlider) {
-        updateColor()
-    }
-    
-    @IBAction func blueSliderChanged(_ sender: UISlider) {
-        updateColor()
-    }
-    
+        
     func updateColor() {
-        let red = CGFloat(redSlider.value) / 255.0
-        let green = CGFloat(greenSlider.value) / 255.0
-        let blue = CGFloat(blueSlider.value) / 255.0
+        let red = CGFloat(redSlider.value)
+        let green = CGFloat(greenSlider.value)
+        let blue = CGFloat(blueSlider.value)
         let alpha = CGFloat(opacitySlider.value)
-            
-        selectedColor = UIColor(red: red, green: green, blue: blue, alpha: alpha)
-            
-        //     hexTF.text = selectedColor.toHexString()
-            
-        view.backgroundColor = selectedColor
+        
+        let color = UIColor(red: red/255, green: green/255, blue: blue/255, alpha: alpha/100)
+        
+        colorView.backgroundColor = color
     }
 }
-   

@@ -7,17 +7,37 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, ColorPickerDelegate {
+    @IBOutlet var viewBackground: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
-    @IBAction func changeBGButtonPressed(_ sender: UIButton) {
-        performSegue(withIdentifier: "goToSettings", sender: self)
+    func handleColorChangeWithClosure(_ color: UIColor) {
+        view.backgroundColor = color
     }
 
-    @IBAction func unwindToMain(_ unwindSegue: UIStoryboardSegue) {
-        let sourceViewController = unwindSegue.source as! SettingsViewController
-        view.backgroundColor = sourceViewController.selectedColor
+    @IBAction func changeBGButtonPressed(_ sender: UIButton) {
+        let SettingsVС = storyboard?.instantiateViewController(withIdentifier: "SettingsViewController") as! SettingsViewController
+        SettingsVС.delegate = self
+
+        SettingsVС.colorClosure = handleColorChangeWithClosure
+        navigationController?.pushViewController(SettingsVС, animated: true)
+    }
+
+    func didSelectColor(_ color: UIColor) {
+        view.backgroundColor = color
+    }
+    
+    @IBAction func UnwindAction(unwindSegue: UIStoryboardSegue) {
+        if let sourceViewController = unwindSegue.source as? SettingsViewController {
+                view.backgroundColor = sourceViewController.colorView.backgroundColor
+            }
+    }
+
+    @IBAction func UnwindActionWithClosure(unwindSegue: UIStoryboardSegue) {
+        if let sourceViewController = unwindSegue.source as? SettingsViewController {
+                view.backgroundColor = sourceViewController.colorView.backgroundColor
+            }
     }
 }
